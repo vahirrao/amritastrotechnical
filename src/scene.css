@@ -1,0 +1,9 @@
+.aat-scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;background:#070b16;isolation:isolate}
+.aat-panorama{width:100%;height:100%;display:block}
+.aat-sky-layer{transform:translate(var(--sky-x,0px),var(--sky-y,0px));transition:transform .5s ease-out}
+.aat-stars{animation:aat-twinkle 6s ease-in-out infinite alternate}
+.aat-ring-ticks{transform-origin:0 0;animation:aat-orbit 220s linear infinite}
+@keyframes aat-twinkle{from{opacity:.63}to{opacity:1}}
+@keyframes aat-orbit{to{transform:rotate(360deg)}}
+@media(max-width:760px){.aat-panorama{width:145%;margin-left:-45%}.aat-scene:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,11,22,.82),rgba(7,11,22,.45) 53%,rgba(7,11,22,.18))}}
+@media(prefers-reduced-motion:reduce){.aat-scene *{animation:none!important;transition:none!important}.aat-sky-layer{transform:none}}
